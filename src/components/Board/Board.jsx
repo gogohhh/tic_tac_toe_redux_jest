@@ -8,7 +8,7 @@ function Board(props){
     return(
         <div id="board" className="centrado d-flex flex-wrap">
             {
-                board.map((turno , i) => <Square key={i} turno={turno} />)
+                board.map((turno , i) => <Square key={i} index={i} turno={turno} />)
             }
         </div>
     );
