@@ -1,11 +1,9 @@
 import React from 'react';
-import Board from './components/Board/Board';
+import Board from './components/Board/Board.jsx';
 
 function App() {
   return (
-    <div className="App">
-      Hola mundo desde  raeact tic tac toe diego
-
+    <div className="container w-50">
       <Board />
     </div>
     

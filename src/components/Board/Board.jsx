@@ -1,7 +1,16 @@
 import React from "react";
+import Square from "./Square/Square.jsx";
+import '../../App.css';
 
 function Board(props){
-    return <div className="board"> Board </div>
+    const board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    return(
+        <div className="row board-centrado">
+            {
+                board.map(() => <Square />)
+            }
+        </div>
+    );
 }
 
 export default Board;
