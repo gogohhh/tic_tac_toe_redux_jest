@@ -1,7 +1,7 @@
 import React from "react";
 
 function Cross(props){
-    return <div className="Cross"> X </div>
+    return <div className="symbol text-center"> X </div>
 }
 
 export default Cross;
