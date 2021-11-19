@@ -10,10 +10,10 @@
   display: table;
 }
 
-.board-centrado{
+.centrado{
   position: absolute;
   top: 35%; 
-  left: 25%; 
+  left: 41%; 
 }
 
 .tablero_centrado{
@@ -42,4 +42,10 @@ left: 36%;
 
 .square:focus {
   outline: none;
+}
+
+/* Cross styles*/
+
+.Cross{
+
 }

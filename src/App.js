@@ -3,7 +3,7 @@ import Board from './components/Board/Board.jsx';
 
 function App() {
   return (
-    <div className="container w-50">
+    <div className="game">
       <Board />
     </div>
     
