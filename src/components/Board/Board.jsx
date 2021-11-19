@@ -1,16 +1,17 @@
 import React from "react";
 import Square from "./Square/Square.jsx";
 import '../../App.css';
+import { connect } from 'react-redux';
 
 function Board(props){
-    const board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const board = props.board //Ahora le estamos pasando el board de redux
     return(
         <div id="board" className="centrado d-flex flex-wrap">
             {
-                board.map((turn , i) => <Square key={i} turno={turn} />)
+                board.map((turno , i) => <Square key={i} turno={turno} />)
             }
         </div>
     );
 }
 
-export default Board;
+export default connect( ({board}) => ({board}))(Board)

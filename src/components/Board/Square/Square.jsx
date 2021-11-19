@@ -6,7 +6,7 @@ import '../../../App.css';
 function Square(props){
     return (
         <div className="cell m-0">
-           {props.turno % 2 === 0 ? <Cross /> : <Circle />} 
+           {props.turno}  {/*Ahora se pasa solo el turno y los square quedan nulos */} 
         </div>
     )
     

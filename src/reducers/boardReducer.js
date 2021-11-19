@@ -1,6 +1,9 @@
+//Las acciones describen que algo pasó, pero no especifican cómo cambió el estado de la aplicación en respuesta. 
+//Esto es trabajo de los reducers.
+
 import { DRAW_X, DRAW_O } from '../helpers/actionTypes.js';
 
-const initialState = [
+const initialState = [  //El estado inicial para el array pero desde el reducer
     null, null, null,
     null, null, null,
     null, null, null
