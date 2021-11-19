@@ -4,7 +4,7 @@ import Cross from "./Cross.jsx";
 import Circle from "./Circle.jsx";
 import '../../../App.css';
 
-import {tirarXAction} from '../../../actions/boardActions'; //importamos las funciones de tirar
+import {tirarXAction, tirarOAction} from '../../../actions/boardActions'; //importamos las funciones de tirar
 
 function Square(props){
     const {turno, index, tirar} = props 
@@ -21,7 +21,7 @@ function Square(props){
 export default connect(null, dispatch => ({  //* Agregamos un dispatch para que conect pueda enviar la funcion Square al store de Redux
     
     tirar: (cellIndex) => {
-        dispatch(tirarXAction(cellIndex))
+        dispatch(tirarOAction(cellIndex))
     }
 
     })) (Square)

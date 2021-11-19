@@ -51,6 +51,7 @@ left: 36%;
 /* Cross styles*/
 
 .cell{
+  background: #fff;
   border: 2px solid rgb(112, 112, 112);
   width: 100px;
   height: 100px;
