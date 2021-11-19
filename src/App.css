@@ -1,4 +1,8 @@
 /* Board styles */
+
+#board{
+  width: 300px;
+}
 .game {
   display: flex;
   flex-direction: row;
@@ -12,8 +16,8 @@
 
 .centrado{
   position: absolute;
-  top: 35%; 
-  left: 41%; 
+  top: 25%; 
+  left: 37%; 
 }
 
 .tablero_centrado{
@@ -46,6 +50,15 @@ left: 36%;
 
 /* Cross styles*/
 
-.Cross{
+.cell{
+  border: 2px solid rgb(112, 112, 112);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
 
+.symbol{
+  line-height: 100px;
+  font-size: 40px;
+  font-weight: bold;
 }
