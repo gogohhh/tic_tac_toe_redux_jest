@@ -12,7 +12,7 @@ export function checkResultAction(board){
         }
     }else{
         const check = board.filter(simbolo => simbolo === null)
-        if(check.length === 1){
+        if(check.length === 0){
             return {
                 type: EMPATE
             }

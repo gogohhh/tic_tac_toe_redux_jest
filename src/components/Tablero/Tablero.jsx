@@ -43,4 +43,4 @@ function Tablero(props){
 export default connect( 
     ({board, players, result}) => ({board, players, result}),
     dispatch => ({ checkResultAction: (board)  => dispatch(checkResultAction(board)) })
-)(Tablero);
+)(Tablero)
