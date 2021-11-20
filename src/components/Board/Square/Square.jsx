@@ -9,10 +9,11 @@ import {tirarXAction, tirarOAction} from '../../../actions/boardActions'; //impo
 
 function Square(props){
     const {simbolo, index, tirar, players} = props 
+    const disabled = simbolo ? 'disabled' : ''
 
     return (
         
-        <div className="cell m-0" onClick={() => tirar(players, index)}> {/* Al hacer click pasamos la prop tirar que manda la action de tirarXAction*/}
+        <div className={'cell '+ disabled} onClick={() => tirar(players, index)}> {/* Al hacer click pasamos la prop tirar que manda la action de tirarXAction*/}
            {simbolo ? (simbolo === 'X' ? <Cross /> : <Circle /> ) : '' }  {/*Ahora se pasa solo el turno y los square quedan nulos */} 
         </div>
     )

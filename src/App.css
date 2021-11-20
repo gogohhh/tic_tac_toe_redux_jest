@@ -48,6 +48,14 @@ left: 36%;
   outline: none;
 }
 
+.disabled{
+  cursor: not-allowed;
+}
+
+.disabled:hover{
+  background: white;
+}
+
 /* Cross styles*/
 
 .cell{
