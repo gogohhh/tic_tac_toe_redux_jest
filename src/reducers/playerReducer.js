@@ -3,7 +3,7 @@ import { JUGADOR_X, JUGADOR_O, TURNO} from '../helpers/actionTypes';
 const initialState = {
     j1: 'X',
     j2: 'O',
-    turno: 'j1'
+    turn: 'j1'
 }
 
 export function playerReducer(state = initialState, action){
@@ -12,7 +12,7 @@ export function playerReducer(state = initialState, action){
         case JUGADOR_X:
             const newXState = {...state}
             
-            if(jugador === 'j1'){
+            if(action.jugador === 'j1'){
                 newXState.j1 = 'X'
                 newXState.j2 = 'O'
             }else{
@@ -24,7 +24,7 @@ export function playerReducer(state = initialState, action){
         case JUGADOR_O:
             const newOState = {...state}
             
-            if(jugador === 'j1'){
+            if(action.jugador === 'j1'){
                 newOState.j1 = 'O'
                 newOState.j2 = 'X'
             }else{
@@ -36,10 +36,10 @@ export function playerReducer(state = initialState, action){
         case TURNO:
             const newState = {...state}
 
-            if(newState.turno === 'j1'){
-                newState.turno = 'j2'
+            if(newState.turn === 'j1'){
+                newState.turn = 'j2'
             }else{
-                newState.turno = 'j1'
+                newState.turn = 'j1'
             }
             return newState
         
