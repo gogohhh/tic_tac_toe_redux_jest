@@ -5,11 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 
-import store from './Store';
+import store from './store.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store}> {/* El provider hace que los componentes dentro de el sean enviados al store de redux */}
       <App />
     </Provider>
   </React.StrictMode>,
