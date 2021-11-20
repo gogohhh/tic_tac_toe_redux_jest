@@ -15,11 +15,11 @@ function Tablero(props){
 
     }else if(result.win === 'X') {
         const player = players.j1 === 'X' ? 'Jugador 1' : 'Jugador 2'
-        return <div className="alert alert-success mt-2"> {player} gano! </div>
+        return <div className="alertaGanador alert alert-success mt-2"> {player} gano! </div>
 
     }else if(result.win === 'O') {
         const player = players.j1 === 'O' ? 'Jugador 1' : 'Jugador 2'
-        return <div className="alert alert-success mt-2"> {player} gano! </div>
+        return <div className="alertaGanador alert alert-success mt-2"> {player} gano! </div>
     }
 
     return (
