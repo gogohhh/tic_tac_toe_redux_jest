@@ -8,12 +8,12 @@ import '../../../App.css';
 import {tirarXAction, tirarOAction} from '../../../actions/boardActions'; //importamos las funciones de tirar
 
 function Square(props){
-    const {turno, index, tirar, players} = props 
+    const {simbolo, index, tirar, players} = props 
 
     return (
         
         <div className="cell m-0" onClick={() => tirar(players, index)}> {/* Al hacer click pasamos la prop tirar que manda la action de tirarXAction*/}
-           {turno ? (turno === 'X' ? <Cross /> : <Circle /> ) : '' }  {/*Ahora se pasa solo el turno y los square quedan nulos */} 
+           {simbolo ? (simbolo === 'X' ? <Cross /> : <Circle /> ) : '' }  {/*Ahora se pasa solo el turno y los square quedan nulos */} 
         </div>
     )
     
