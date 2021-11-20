@@ -71,3 +71,23 @@ left: 36%;
   font-size: 40px;
   font-weight: bold;
 }
+
+.turno{
+  position:absolute;
+  top: 10%;
+  left: 38%;
+}
+.turnoTag{
+  font-size: 30px;
+}
+
+.centered{
+  position: absolute !important;
+  top: 35% !important; 
+  left: 15%  !important;
+}
+
+.jugadorTag{
+  font-size: 20px;
+  font-weight: bold;
+}
