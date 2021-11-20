@@ -1,16 +1,24 @@
 import React from "react";
 import Square from "./Square/Square.jsx";
+import Tablero from "../Tablero/Tablero.jsx";
 import '../../App.css';
 import { connect } from 'react-redux';
+import { Fragment } from "react";
 
 function Board(props){
-    const board = props.board //Ahora le estamos pasando el board de redux
+    const {board} = props//Ahora le estamos pasando el board de redux
     return(
-        <div id="board" className="centrado d-flex flex-wrap">
-            {
-                board.map((turno , i) => <Square key={i} turno={turno} />)
-            }
-        </div>
+        <Fragment>
+            
+            <Tablero />
+
+            <div id="board" className="centrado d-flex flex-wrap">
+                {
+                    board.map((simbolo , i) => <Square key={i} index={i} simbolo={simbolo} />)
+                }
+            </div>
+            
+        </Fragment>
     );
 }
 
