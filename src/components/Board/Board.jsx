@@ -1,25 +1,16 @@
 import React from "react";
 import Square from "./Square/Square.jsx";
+import Tablero from "../Tablero/Tablero.jsx";
 import '../../App.css';
 import { connect } from 'react-redux';
 import { Fragment } from "react";
 
 function Board(props){
-    const {board, players} = props//Ahora le estamos pasando el board y players de redux
+    const {board} = props//Ahora le estamos pasando el board de redux
     return(
         <Fragment>
-            <div className="centered">
-                <div className="row">
-                    <p className="jugadorTag"><strong>Jugador 1: </strong>{players.j1}</p>
-                </div>
-                <div className="row">
-                    <p className="jugadorTag"><strong>Jugador 2: </strong>{players.j2}</p>
-                </div>
-            </div>
-
-            <div className="turno">
-                <p className="turnoTag"><strong>Turno de: </strong>{players.turn === 'j1' ? 'Jugador 1' : 'Jugador 2'}</p>
-            </div>
+            
+            <Tablero />
 
             <div id="board" className="centrado d-flex flex-wrap">
                 {
@@ -31,4 +22,4 @@ function Board(props){
     );
 }
 
-export default connect( ({board, players}) => ({board, players}))(Board)
+export default connect( ({board}) => ({board}))(Board)
