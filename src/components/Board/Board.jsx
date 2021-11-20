@@ -9,9 +9,7 @@ function Board(props){
     const {board} = props//Ahora le estamos pasando el board de redux
     return(
         <Fragment>
-            
             <Tablero />
-
             <div id="board" className="centrado d-flex flex-wrap">
                 {
                     board.map((simbolo , i) => <Square key={i} index={i} simbolo={simbolo} />)
