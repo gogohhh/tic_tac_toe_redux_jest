@@ -11,8 +11,15 @@ export function checkResultAction(board){
             type: O_GANA
         }
     }else{
-        return {
-            type: EMPATE
+        const check = board.filter(simbolo => simbolo === null)
+        if(check.length === 0){
+            return {
+                type: EMPATE
+            }
+        } else {
+            return {
+                type: 'NO_RESULT'
+            }
         }
     }
 }

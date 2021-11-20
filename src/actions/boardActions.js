@@ -2,15 +2,25 @@
 import { DRAW_X, DRAW_O } from '../helpers/actionTypes.js';
 
 export function tirarXAction(cellIndex){
-    return {
-        type: DRAW_X,
-        cellIndex
+    return (dispatch) => {
+        return new Promise(resolve => {
+            dispatch({
+                type: DRAW_X,
+                cellIndex
+            })
+            resolve()
+        })
     }
 }
 
 export function tirarOAction(cellIndex){
-    return {
-        type: DRAW_O,
-        cellIndex
+    return (dispatch) => {
+        return new Promise(resolve => {
+            dispatch({
+                type: DRAW_O,
+                cellIndex
+            })
+            resolve()
+        })
     }
 }
