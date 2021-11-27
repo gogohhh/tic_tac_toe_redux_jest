@@ -14,7 +14,7 @@ function Square(props){
 
     return (
         
-        <div className={'cell '+ disabled} onClick={() => tirar(board, players, index).then(() => { toggleTurn(); })}> {/* Al hacer click pasamos la prop tirar que manda la action de tirarXAction*/}
+        <div id="simbolo" className={'cell '+ disabled} onClick={() => tirar(board, players, index).then(() => { toggleTurn(); })}> {/* Al hacer click pasamos la prop tirar que manda la action de tirarXAction*/}
            {simbolo ? (simbolo === 'X' ? <Cross /> : <Circle /> ) : '' }  {/*Ahora se pasa solo el turno y los square quedan nulos */} 
         </div>
     )
