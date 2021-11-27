@@ -1,0 +1,13 @@
+name: Build y test del proyecto tic tac toe
+
+on: [push]
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+
+   steps:
+     - uses: actions/checkout@v2
+     - name: React app 17.0 Tic tac toe
+     - name: Build
+       run: npm run build
