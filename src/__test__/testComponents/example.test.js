@@ -10,7 +10,7 @@ const isDebugging = () => {
 }
 
 describe('on page load', () => {
-  test('h1 loads correctly', async() => {
+  test('loads correctly', async() => {
     let browser = await puppeteer.launch({})
     let page = await browser.newPage()
     
