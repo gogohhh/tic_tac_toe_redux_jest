@@ -1,28 +1,26 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer')
 
-//test para encontrar el text'Jugador'
-test('Prueba de busqueda de jugador', async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  const app = 'http://localhost:3000/';
-  await page.goto(app);
+const isDebugging = () => {
+  const debugging_mode = {
+    headless: false,
+    slowMo: 250,
+    devtools: true,
+  }
+  return process.env.NODE_ENV === 'debug' ? debugging_mode : {}
+}
 
-  //buscar el texto 'Jugador' en la etiqueta div es rendereado correctamente
-  await page.type('div', 'Jugador');
-
-
-  await browser.close();
-});
-
-test('Render tablero', async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  const app = 'http://localhost:3000/';
-  await page.goto(app);
-
-  await page.click('div#simbolo');
-
-  await browser.close();
-});
-
-
+describe('on page load', () => {
+  test('h1 loads correctly', async() => {
+    let browser = await puppeteer.launch({})
+    let page = await browser.newPage()
+    
+    page.emulate({
+      viewport: {
+        width: 500,
+        height: 2400,
+      }
+    })
+  })
+  
+  
+  }) // end describe
